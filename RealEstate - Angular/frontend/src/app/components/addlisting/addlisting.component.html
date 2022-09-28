@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label htmlFor="sellorrent">For Sell/Rent</label>
+                    <select [(ngModel)]="listing.sellOrRent" name="sellOrRent" class="form-control">
+                        <option selected>Select Sell/Rent</option>
+                        <option [ngValue]="false">Sell</option>
+                        <option [ngValue]="true">Rent</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label htmlFor="name" class="text-muted">Name</label>
+                    <input [(ngModel)]="listing.name" name="name" type="text" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label htmlFor="description">Description</label>
+                    <textarea [(ngModel)]="listing.description" name="description" name="description" cols="20" rows="5"
+                        class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label htmlFor="city" class="text-muted">City</label>
+                    <input [(ngModel)]="listing.city" type="text" name="city" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label htmlFor="price">price</label>
+                    <input [(ngModel)]="listing.price" type="number" name="price" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label htmlFor="Surface" class="text-muted">Beds</label>
+                    <input [(ngModel)]="listing.beds" type="text" name="beds" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label htmlFor="Surface" class="text-muted">Baths</label>
+                    <input [(ngModel)]="listing.baths" type="text" name="baths" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label htmlFor="Surface" class="text-muted">m²</label>
+                    <input [(ngModel)]="listing.m2" type="text" name="listing" class="form-control" />
+                </div>
+                <!-- <div class="form-group">
+                    <label htmlFor="Surface" class="text-muted">CategoryId</label>
+                    <input [(ngModel)]="listing.categorieId" type="text" name="categorieId" class="form-control" />
+                </div> -->
+                <div class="form-group">
+                    <label htmlFor="Surface" class="text-muted">Category</label>
+                <select [(ngModel)]="listing.categorieId" name="search_param" class="form-select form-select-lg mb-5" aria-label=".form-select-lg example">
+                    <option *ngFor="let category of categorys" [value]="category.id">{{category.nom}}</option>
+                </select>
+            </div>
+                <button type="submit" class="btn btn-outline-primary">New Listing</button>
+            </form>
+
+        </div>
+        <!--<div class="col-md-6">
+             <div>
+                <div class="dropzone" appDrag (files)="fileDropped($event)">
+                    <div class="text-wrapper">
+                        <div class="center">
+                            Drag & Drop Your Images Or
+                            <a class="brows-button" (click)="selectFile.click()">Browse</a>
+                            a File
+                        </div>
+                    </div>
+                </div>
+                <input style="display: none;" type="file" multiple value="select" #selectFile
+                    (change)="onFileSelected($event)">
+            </div>
+            <div class="mt-5">
+                <div class="row">
+                    <mat-grid-list cols="4" rowHeight="1:1">
+                        <mat-grid-tile *ngFor="let file of listing.ListingImages; let i = index;">
+                            <div style="position:relative;">
+                                <span class="bg-danger btn-remove-image" (click)="removeImages(i)"><i
+                                        class="fa-solid fa-xmark"></i></span>
+                                <img [src]="file.url" width="100px" height="100px">
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </div>
+            </div> 
+        </div>-->
+    </div>
+</div>

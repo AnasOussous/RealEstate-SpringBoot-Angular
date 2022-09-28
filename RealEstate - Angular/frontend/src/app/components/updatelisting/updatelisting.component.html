@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-5 mx-auto">
+        <form (ngSubmit)="onSubmit()">
+            <!-- <div class="form-group">
+              <label htmlFor="sellorrent">For Sell/Rent</label>
+              <select [(ngModel)]={product.sellorrent} name="sellorrent" name="sellorrent" class="form-control">
+                  <option selected>Select Sell/Rent</option>
+                  <option [(ngModel)]="false">Sell</option>
+                  <option [(ngModel)]="true">Rent</option>
+              </select>
+          </div> -->
+            <!-- <div class="form-group">
+                <label htmlFor="photo" class="text-muted">Image</label>
+                <input multiple  type="file" name='photo' class="form-control" />
+          </div> -->
+            <div class="form-group">
+                <label htmlFor="name" class="text-muted">Name</label>
+                <input [(ngModel)]="listing.name" name="name" type="text" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label htmlFor="description">Description</label>
+                <textarea [(ngModel)]="listing.description" name="description" name="description" cols="30" rows="10"
+                    class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label htmlFor="city" class="text-muted">City</label>
+                <input [(ngModel)]="listing.city" type="text" name="city" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label htmlFor="price">price</label>
+                <input [(ngModel)]="listing.price" type="number" name="price" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label htmlFor="Beds" class="text-muted">Beds</label>
+                <input [(ngModel)]="listing.beds" type="text" name="beds" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label htmlFor="Baths" class="text-muted">Baths</label>
+                <input [(ngModel)]="listing.baths" type="text" name="baths" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label htmlFor="Surface" class="text-muted">m²</label>
+                <input [(ngModel)]="listing.m2" type="text" name="listing" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Update Listing</button>
+        </form>
+    </div>
+</div>

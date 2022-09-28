@@ -1,0 +1,782 @@
+{
+	"info": {
+		"_postman_id": "f566d20d-40f8-4325-b60a-4bea91736156",
+		"name": "Brief16",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22001840"
+	},
+	"item": [
+		{
+			"name": "CRUD User",
+			"item": [
+				{
+					"name": "GetAllAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmFzcyIsImlhdCI6MTY2MzIzMjgwOSwiZXhwIjoxNjYzMzE5MjA5fQ.KD9pLtSoMXTezGos-04jvHhxf2onu_G7QkTb_1P6FEbWGC6e6JzBztEM_4uM6mTK__lDPT9ZBvXaaYT06v8cxQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByIdAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmFzcyIsImlhdCI6MTY2MzIzMjgwOSwiZXhwIjoxNjYzMzE5MjA5fQ.KD9pLtSoMXTezGos-04jvHhxf2onu_G7QkTb_1P6FEbWGC6e6JzBztEM_4uM6mTK__lDPT9ZBvXaaYT06v8cxQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAdmin",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAdmin",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nom\": \"Bouslamti\",\r\n        \"prenom\": \"Anas\",\r\n        \"telephone\": \"+212607503940\",\r\n        \"email\": \"anas@gmail.com\",\r\n        \"username\": \"AnasOuss\",\r\n        \"password\": \"anas\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD Command",
+			"item": [
+				{
+					"name": "GetAllCommand",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmFzcyIsImlhdCI6MTY2MzIzMjE3NSwiZXhwIjoxNjYzMzE4NTc1fQ.9-3TRQaeAOsHAUdKdxWuqpBshy7jdQ5MjwY08mHYdMkdQjpYrcGv-4TZOnvmM9twFOy0VW1R5m_LRKvjNP1BGg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/commands",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByIdcommands",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmFzcyIsImlhdCI6MTY2MzIzMjgwOSwiZXhwIjoxNjYzMzE5MjA5fQ.KD9pLtSoMXTezGos-04jvHhxf2onu_G7QkTb_1P6FEbWGC6e6JzBztEM_4uM6mTK__lDPT9ZBvXaaYT06v8cxQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/commands/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"commands",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletecommands",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmFzcyIsImlhdCI6MTY2MzIzMjE3NSwiZXhwIjoxNjYzMzE4NTc1fQ.9-3TRQaeAOsHAUdKdxWuqpBshy7jdQ5MjwY08mHYdMkdQjpYrcGv-4TZOnvmM9twFOy0VW1R5m_LRKvjNP1BGg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/commands/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"commands",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Addcommands",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmFzcyIsImlhdCI6MTY2MzIzODg2MCwiZXhwIjoxNjYzMzI1MjYwfQ.MW7IrGG9OJeuH80FTqtE8xF7tEEznxWsNuodR_4ZYxyDnDuBvrOaPiqL3JdCr-MjRstm3LVfK04_-pfwyv3CsA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n                \"total\": 300,\r\n                \"clientId\": 2,\r\n                \"produitsId\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/commands",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"commands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updatecommands",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmFzcyIsImlhdCI6MTY2MzIzMTY4MiwiZXhwIjoxNjYzMzE4MDgyfQ.j9_eV_6DnZZ_m_GLPV-MqpUGxfJTMuT7M6xqaMWvFXt2THnQ0prIqikcOgVX3b4S4GJu0pIY8ciqyTuWFWX05A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n              \r\n                \"dateCommand\": \"2022-12-12\",\r\n                \"total\": 200,\r\n                \"clientId\": 2,\r\n                \"produitsId\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/commands/32",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"commands",
+								"32"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD Produit",
+			"item": [
+				{
+					"name": "GetAllProduit",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmFzcyIsImlhdCI6MTY2MzIzMjY1NywiZXhwIjoxNjYzMzE5MDU3fQ.eFlFVZPiblL5HefRmABHY-UXxYqVqRxlpJdDv5tD5s3nGDJaFf5aEVI495e1x-ARP-DCwfKRWTa0Bt958qD3Rw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/produits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByIdProduit",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/produits/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produits",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduit",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/produits/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produits",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProduit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNZWRpZCIsImlhdCI6MTY2MzIzNzM5OSwiZXhwIjoxNjYzMzIzNzk5fQ.EzruJNaANPI7Q5W0Y45zyN-st0TaEbL13VgZalwFNPgZf_v4BrktagD7Ex9oklHvPksm9SEF3owXQ-0-mgsnew",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nom\": \"Test\",\r\n        \"description\": \"chi 7aja lakher\",\r\n        \"prix\": 40.89,\r\n        \"dateExpiration\": \"2023-12-11\",\r\n        \"categorieId\": 6,\r\n        \"usersId\": 1,\r\n        \"quantiteStock\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/produits",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmFzcyIsImlhdCI6MTY2MzIzMjgwOSwiZXhwIjoxNjYzMzE5MjA5fQ.KD9pLtSoMXTezGos-04jvHhxf2onu_G7QkTb_1P6FEbWGC6e6JzBztEM_4uM6mTK__lDPT9ZBvXaaYT06v8cxQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nom\": \"TestUpppppppppp\",\r\n        \"description\": \"sssssssssss\",\r\n        \"prix\": 40.89,\r\n        \"dateExpiration\": \"2023-12-11\",\r\n        \"categorieId\": 2,\r\n        \"usersId\": 2,\r\n        \"quantiteStock\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/produits/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produits",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD Category",
+			"item": [
+				{
+					"name": "GetAllCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNZWRpZCIsImlhdCI6MTY2MzIzOTA2OCwiZXhwIjoxNjYzMzI1NDY4fQ.Fv4Nqqy7UBbNqV2vR99Q9uxlC-eVanvu3LuxsCyHXWszgLSTaq1QnHDu8JNXeTDBintHR3FBuQruo7iSY_iXmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByIdCategory",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/categories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmFzcyIsImlhdCI6MTY2MzIzMjgwOSwiZXhwIjoxNjYzMzE5MjA5fQ.KD9pLtSoMXTezGos-04jvHhxf2onu_G7QkTb_1P6FEbWGC6e6JzBztEM_4uM6mTK__lDPT9ZBvXaaYT06v8cxQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/categories/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"categories",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNZWRpZCIsImlhdCI6MTY2MzIzNzM5OSwiZXhwIjoxNjYzMzIzNzk5fQ.EzruJNaANPI7Q5W0Y45zyN-st0TaEbL13VgZalwFNPgZf_v4BrktagD7Ex9oklHvPksm9SEF3owXQ-0-mgsnew",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\" : \"Anti\",\r\n    \"usersId\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJNZWRpZCIsImlhdCI6MTY2MzIzNzM5OSwiZXhwIjoxNjYzMzIzNzk5fQ.EzruJNaANPI7Q5W0Y45zyN-st0TaEbL13VgZalwFNPgZf_v4BrktagD7Ex9oklHvPksm9SEF3owXQ-0-mgsnew",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nom\" :\"Antibiotique\",\r\n        \"usersId\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/categories/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"categories",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\" :\"Ouss\",\r\n    \"prenom\" : \"Anass\",\r\n    \"email\" : \"anas@health.ma\",\r\n    \"password\" :\"password\",\r\n    \"username\" : \"Anass\",\r\n    \"telephone\" : \"+212691528072\"\r\n    }\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbmFzcyIsImlhdCI6MTY2MzIzMTE3NywiZXhwIjoxNjYzMzE3NTc3fQ.1l6zINyHJpttazXg7QosgjAvzKu_n3p4cwuKDzq71_Ank4zpm-0CBy2nQZHtCbr-Y-knpVLm0hN-WmJrjGicdw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" :\"password\",\r\n    \"username\" : \"Medid\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

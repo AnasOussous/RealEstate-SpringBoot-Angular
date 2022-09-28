@@ -1,0 +1,111 @@
+<!-- 
+   <section class="featured" id="featured">
+      <div class="box-container">
+    <div class="box" *ngFor="let listing of listings">
+      <div class="image-container">
+          <img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271__340.jpg" alt="">
+          <div class="info">
+              <h3>{{listing.dateCreated | dateAgo}}</h3>
+              <h3>for sell</h3>
+          </div>
+          <div class="icons">
+          </div>
+      </div>
+      <div class="content">
+          <div class="price">
+              <h3>{{listing.price}} DH/mo</h3>
+          </div>
+          <div class="location">
+              <h3>{{listing.name}}</h3>
+              <p>{{ (listing.description.length>6)? (listing.description | slice:0:30)+'...':(listing.description) }}</p>
+          </div>
+          <div class="details">
+              <h4> <i class="fas fa-expand"></i> {{listing.m2}} m² </h4>
+              <h4> <i class="fas fa-bed"></i> {{listing.beds}} beds </h4>
+              <h4> <i class="fas fa-bath"></i> {{listing.baths}} baths </h4>
+          </div>
+          <div class="buttons">
+            <button *ngIf="showAdminBoard" (click)="deleteListing(listing.id)" class="btn btn-danger deletebtn" type="submit"><i
+              class="fa fa-trash"></i></button>
+          <button *ngIf="showAdminBoard" (click)="updateListing(listing.id)" class="btn btn-success updatebtn" type="submit"><i
+              class="fa fa-edit"></i></button>
+              <button *ngIf="isLoggedIn" (click)="listingDetails(listing.id)" class="btn btn-success btndetails" type="submit">View More </button>
+          </div>
+      </div>
+  </div>
+  
+</div>
+</section> -->
+
+
+
+
+
+
+<nav *ngIf="isLoggedIn" style=" background:antiquewhite;" class="navbar navbar-expand-lg py-2">
+  <div class="container-fluid">
+    <a *ngIf="showAdminBoard" routerLink="/addlistings" class="navbar-brand logo btn btn-success" style="color: azure;border: 3px solid black;">Add Building</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav flex-fill justify-content-center mx-auto">
+        <li class="nav-item">
+          <input style="width: 900px;" [(ngModel)]="nom" type="text" class="form-control" name="x" placeholder="Search Building...">
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+<div class="row">
+ <!-- <span class="pull-right">
+      <input type="text" [(ngModel)]="nom" class="form-control" placeholder="Search">
+  </span> -->
+
+  <!-- <div class="col-md-9 col-md-push-1 bg-danger pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                    <input [(ngModel)]="nom" type="text" class="form-control" name="x" placeholder="Search term...">
+                    <span class="input-group-btn">
+                    </span>     
+            </div>     
+        </div>
+    </div>    
+</div> -->
+
+    <div class="box" *ngFor="let listing of listings | filter : nom">
+      <div class="top">
+        <img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271__340.jpg" alt="" />
+        <div class="info">
+          <h3>{{listing.dateCreated | dateAgo}}</h3>
+          <h3 *ngIf="!listing.sellOrRent">For Sell</h3>
+          <h3 *ngIf="listing.sellOrRent">For Rent</h3>
+      </div>
+        <button *ngIf="showAdminBoard" (click)="deleteListing(listing.id)" class="btn btn-danger deletebtn" type="submit"><i
+            class="fa fa-trash"></i></button>
+        <button *ngIf="showAdminBoard" (click)="updateListing(listing.id)" class="btn btn-success updatebtn" type="submit"><i
+            class="fa fa-edit"></i></button>
+      </div>
+      <div class="bottom">
+        <h2 style="font-size: 30px;color:#ff5a3d;">{{listing.name}}</h2>
+        <p>
+          {{ (listing.description.length>6)? (listing.description | slice:0:30)+'...':(listing.description) }}
+        </p>
+        <div class="details">
+          <h4> <i style="color: rgb(59, 59, 59);" class="fas fa-expand"></i> {{listing.m2}} m² </h4>
+          <h4> <i style="color: rgb(59, 59, 59);" class="fas fa-bed"></i> {{listing.beds}} beds </h4>
+          <h4> <i style="color: rgb(59, 59, 59);" class="fas fa-bath"></i> {{listing.baths}} baths </h4>
+        </div>
+        <div class="price">
+          <span *ngIf="isLoggedIn">{{listing.price}} DH
+            <span *ngIf="listing.sellOrRent">/month</span>
+          </span>
+          <button *ngIf="isLoggedIn" (click)="listingDetails(listing.id)" class="btn btn-success btndetails" type="submit">View More </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

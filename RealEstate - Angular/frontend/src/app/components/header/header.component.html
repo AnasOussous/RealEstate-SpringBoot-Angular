@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg py-2">
+  <div class="container-fluid">
+    <a routerLink="/home" class="navbar-brand logo"><span class="realLogo">Real</span>Estate</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav flex-fill justify-content-center mx-auto">
+        <li class="nav-item">
+          <a class="btn nav-link" routerLinkActive="active" aria-current="page" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn nav-link" routerLinkActive="active" aria-current="page" routerLink="/listings">Listings</a>
+        </li>
+
+
+        <li class="btn nav-item" *ngIf="showAdminBoard">
+          <a routerLinkActive="active" class="nav-link" routerLink="admindashboard">Admin Board</a>
+        </li>
+        <li class="btn nav-item" *ngIf="showCourtierBoard">
+          <a routerLinkActive="active" class="nav-link" routerLink="courtierdashboard">Courtier Board</a>
+        </li>
+        <li class="btn nav-item" *ngIf="showClientBoard">
+          <a routerLinkActive="active" class="nav-link" *ngIf="isLoggedIn" routerLink="dashboard">Dashboard</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a class="btn nav-link" routerLinkActive="active" aria-current="page" routerLink="/contact">Contact</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="btn nav-link" routerLinkActive="active" aria-current="page" routerLink="/agent">Agents</a>
+        </li> -->
+      </ul>
+      <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+          <li class="nav-item">
+            <a class="btn nav-link" routerLink="signup">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="margin-right: 2rem;" routerLink="signin">Login</a>
+          </li>
+        </ul>
+
+
+        <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+          <li class="nav-item">
+            <p class="nav-link">Welcome {{ username }}</p>
+
+          </li>
+          <li class="nav-item">
+            <a class="btn nav-link" (click)="logout()">SignOut</a>
+          </li>
+        </ul>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>

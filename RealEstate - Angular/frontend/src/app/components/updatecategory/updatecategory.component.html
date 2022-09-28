@@ -1,0 +1,16 @@
+<div class="col-md-8 offset-md-1 shadow">
+    <h3>Update User</h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label>Name </label>
+            <input type="text" class="form-control" id="nom" [(ngModel)]="category.nom" name="nom">
+        </div>
+
+        <br>
+        <td>
+            <button class="btn btn-success" type="submit">Submit </button>
+        </td>
+
+    </form>
+</div>

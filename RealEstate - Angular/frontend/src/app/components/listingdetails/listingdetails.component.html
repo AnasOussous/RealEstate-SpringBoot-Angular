@@ -1,0 +1,64 @@
+<div class="container dark-grey-text mt-5">
+
+  <!--Grid row-->
+  <div class="row wow fadeIn ddd">
+
+    <!--Grid column-->
+    <div class="col-md-6 mb-4">
+
+      <img src="https://cdn.pixabay.com/photo/2014/07/10/17/18/large-home-389271__340.jpg" class="img-fluid" alt="">
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-md-6 mb-4">
+
+      <!--Content-->
+      <div class="p-4">
+
+        <div class="mb-3">
+          <span class="badge bg-success mr-4">{{listing.categorieId}}</span>
+          <!-- <span class="badge bg-primary icon">{{listing.dateCreated}}</span> -->
+
+          <span trueValue="yes" falseValue="nope" class="badge bg-danger icon">
+            <span *ngIf="!listing.sellOrRent">For Sell</span>
+            <span *ngIf="listing.sellOrRent">For Rent</span>
+
+          </span>
+
+          <span class="badge bg-primary icon">{{listing.dateCreated | dateAgo}}</span>
+        </div>
+        <h2>{{listing.name}}</h2>
+
+
+        <p class="lead">
+          <span>{{listing.price}} DH</span>
+        </p>
+
+        <p class="lead font-weight-bold">Description</p>
+
+        <p style="font-size: 17px;color: rgb(191, 191, 191);">{{listing.description}}</p>
+
+        <div class="flex">
+          <i class="fa-solid fa-bath"></i>
+          <span class="text-white icon">{{listing.baths}} Baths</span>
+          <i style="margin-left: 10px;" class="fa-solid fa-bed"></i>
+          <span class="text-white icon">{{listing.beds}} Beds</span>
+        </div>
+
+        <div style="margin-top: 10px;" class="flex">
+          <i class="fa-solid fa-expand"></i>
+          <span class="text-white icon">{{listing.m2}} m²</span>
+        </div>
+        <div style="margin-top: 10px;" class="flex">
+          <i class="fa-solid fa-city"></i>
+          <span class="text-white icon">{{listing.city}}</span>
+        </div>
+        
+
+
+      </div>
+    </div>
+  </div>
+</div>
